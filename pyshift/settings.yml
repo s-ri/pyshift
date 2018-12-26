@@ -8,7 +8,7 @@ shift:
     public_client_id: none
     private_client_id: none
     client_secret: none
-    public_key: none
+    public_key: key/public_key.pem
 
 # https://developer.shift.games/ 
 developer_account:
