@@ -45,9 +45,9 @@ def client_credentials():
 @ShiftCommand.command()
 @click.option('-t', '--token', type=click.STRING, help='ID Token')
 @click.option('--cache', is_flag=True, help='Access Token info cached')
-def issue_token(token, cache):
+def issued_token(token, cache):
     """
-    Issue AccessToken
+    Issued AccessToken
     """
     payload = {
         'grant_type': 'id_token',
@@ -142,7 +142,7 @@ def login():
 @click.option('--cache', is_flag=True, help='Using cache data')
 def payment_order(token, cache):
     """
-    Make payment order
+    Get payment order id
     """
     if cache:
         with open('cache.txt') as f:
@@ -175,6 +175,9 @@ def payment_order(token, cache):
 @click.option('-t', '--token', type=click.STRING, help='Access Token')
 @click.option('--cache', is_flag=True, help='Using cache data')
 def payment_verify_receipt(order_id, token, cache):
+    """
+    Verify payment receipt
+    """
     if cache:
         with open('cache.txt') as f:
             d = json.loads(f.read())
@@ -197,6 +200,9 @@ def payment_verify_receipt(order_id, token, cache):
 @click.option('-t', '--token', type=click.STRING, help='Access Token')
 @click.option('--cache', is_flag=True, help='Using cache data')
 def payment_cancel(order_id, token, cache):
+    """
+    Cancel payment
+    """
     if cache:
         with open('cache.txt') as f:
             d = json.loads(f.read())
