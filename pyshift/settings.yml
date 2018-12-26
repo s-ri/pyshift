@@ -1,0 +1,18 @@
+endpoints:
+    token: 'https://connect.shift.games/token'
+    tokeninfo: 'https://connect.shift.games/tokeninfo'
+    payment: 'https://api.shift.games/v1/payment/purchase'
+
+# https://developer.shift.games/
+shift:
+    public_client_id: none
+    private_client_id: none
+    client_secret: none
+    public_key: none
+
+# https://developer.shift.games/ 
+developer_account:
+    grant_type: none
+    username: none
+    password: none
+    scope: none
