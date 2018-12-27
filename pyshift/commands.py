@@ -26,13 +26,14 @@ def echo(http_code, response):
 
 
 @ShiftCommand.command()
-def client_credentials():
+@click.option('--scope', type=click.Choice(['batch', 'purchase']))
+def client_credentials(scope):
     """
     Client Credentials Grant Flow
     """
     payload = {
         'grant_type': 'client_credentials',
-        'scope': 'batch',
+        'scope': scope,
     }
     r = requests.post(endpoints['token'],
                       auth=HTTPBasicAuth(
