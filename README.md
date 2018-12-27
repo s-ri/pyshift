@@ -92,4 +92,8 @@ Step 5) Verify payment receipt
 
 Others
 
-    $  ./cli.py refresh-token --cache
+    $ ./cli.py refresh-token --cache
+    $ ./cli.py refresh-token -t {refresh_token}
+    
+    $ ./cli.py client-credentials --scope=purchase
+    $ ./cli.py client-credentials --scope=batch
